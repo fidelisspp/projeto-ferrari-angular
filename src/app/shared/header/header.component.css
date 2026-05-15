@@ -1,0 +1,56 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.main-header {
+  padding: 0 24px; 
+  position: relative;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, .3);
+  z-index: 9;
+  
+  /* Cores da Ferrari */
+  background-color: #111111; 
+  color: #ffffff;
+  border-bottom: 4px solid #E60000; 
+  height: 70px;
+  
+  display: flex;
+  align-items: center;
+}
+
+  /* Alinhamento da Logo e do Texto */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .ferrari-logo {
+    height: 45px;
+    margin-right: 12px;
+  }
+
+  .branding {
+    margin-left: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+  }
+
+  /* Estilo dos botões dentro do header */
+  button {
+    color: #cccccc;
+    font-weight: 500;
+    margin-left: 8px;
+    transition: color 0.3s ease;
+  }
+
+  button:hover {
+    color: #FFEB3B; 
+  }
+
+  .active-link {
+    color: #E60000;
+    font-weight: bold;
+  }

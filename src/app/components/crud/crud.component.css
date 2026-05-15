@@ -1,0 +1,45 @@
+table {
+  width: 100%;
+}
+
+.container {
+    padding: 50px 80px;
+}
+
+.header-table {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-table h2 {
+  margin: 0;
+  color: #333;
+}
+
+.action-icon {
+  cursor: pointer;
+  margin-right: 12px;
+  transition: all 0.2s ease-in-out;
+}
+
+.action-icon:last-child {
+  margin-right: 0;
+}
+
+.action-icon:hover {
+  transform: scale(1.2);
+}
+
+.edit-icon {
+  color: #1976d2; /* Material Blue */
+}
+
+.add-icon {
+  color: #2e7d32; /* Material Green */
+}
+
+.delete-icon {
+  color: #c62828; /* Material Red */
+}

@@ -1,0 +1,55 @@
+<app-header></app-header>
+
+<div class="container">
+  <button mat-flat-button color="primary" (click)="openDialog(null)">Adicionar Piloto</button>
+
+  <table mat-table #table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Nome </th>
+      <td mat-cell *matCellDef="let pilot"> {{pilot.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="age">
+      <th mat-header-cell *matHeaderCellDef> Idade </th>
+      <td mat-cell *matCellDef="let pilot"> {{pilot.age}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nationality">
+      <th mat-header-cell *matHeaderCellDef> Nacionalidade </th>
+      <td mat-cell *matCellDef="let pilot"> {{pilot.nationality}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="weight">
+      <th mat-header-cell *matHeaderCellDef> Peso </th>
+      <td mat-cell *matCellDef="let pilot"> {{pilot.weight}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="height">
+      <th mat-header-cell *matHeaderCellDef> Altura </th>
+      <td mat-cell *matCellDef="let pilot"> {{pilot.height}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="number">
+      <th mat-header-cell *matHeaderCellDef> Número </th>
+      <td mat-cell *matCellDef="let pilot"> {{pilot.number}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Ações </th>
+      <td mat-cell *matCellDef="let pilot">
+        <button mat-icon-button aria-label="Editar" class="edit-icon action-icon" (click)="editPilot(pilot)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button (click)="deletePilot(pilot.id)" aria-label="Excluir" class="delete-icon action-icon">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+
+<app-footer></app-footer>

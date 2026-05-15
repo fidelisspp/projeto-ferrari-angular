@@ -1,0 +1,35 @@
+<h2 *ngIf="!isEdit" mat-dialog-title>Adicionar Piloto</h2>
+<h2 *ngIf="isEdit" mat-dialog-title>Editar Piloto</h2>
+
+<mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Nome do Piloto</mat-label>
+        <input matInput [(ngModel)]="pilot.name" />
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Idade</mat-label>
+        <input matInput [(ngModel)]="pilot.age" />
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Nacionalidade</mat-label>
+        <input matInput [(ngModel)]="pilot.nationality" />
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Peso</mat-label>
+        <input matInput [(ngModel)]="pilot.weight" />
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Altura</mat-label>
+        <input matInput [(ngModel)]="pilot.height" />
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Número</mat-label>
+        <input matInput [(ngModel)]="pilot.number" />
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button matButton (click)="onNoClick()">Cancelar</button>
+    <button *ngIf="!isEdit" matButton [mat-dialog-close]="pilot" cdkFocusInitial>Adicionar</button>
+    <button *ngIf="isEdit" matButton [mat-dialog-close]="pilot" cdkFocusInitial>Editar</button>
+
+</mat-dialog-actions>
