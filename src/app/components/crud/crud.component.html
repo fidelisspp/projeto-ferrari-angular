@@ -1,7 +1,5 @@
-<app-header></app-header>
-
 <div class="container">
-  <button mat-flat-button color="primary" (click)="openDialog(null)">Adicionar Piloto</button>
+  <button mat-flat-button color="primary" class="add-button" (click)="openDialog(null)">Adicionar Piloto</button>
 
   <table mat-table #table [dataSource]="dataSource" class="mat-elevation-z8">
 
@@ -51,5 +49,3 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 </div>
-
-<app-footer></app-footer>

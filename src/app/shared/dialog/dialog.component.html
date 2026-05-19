@@ -8,7 +8,7 @@
     </mat-form-field>
     <mat-form-field>
         <mat-label>Idade</mat-label>
-        <input matInput [(ngModel)]="pilot.age" />
+        <input matInput type="number" [(ngModel)]="pilot.age" />
     </mat-form-field>
     <mat-form-field>
         <mat-label>Nacionalidade</mat-label>
@@ -24,12 +24,11 @@
     </mat-form-field>
     <mat-form-field>
         <mat-label>Número</mat-label>
-        <input matInput [(ngModel)]="pilot.number" />
+        <input matInput type="number" [(ngModel)]="pilot.number" />
     </mat-form-field>
 </mat-dialog-content>
 <mat-dialog-actions>
-    <button matButton (click)="onNoClick()">Cancelar</button>
-    <button *ngIf="!isEdit" matButton [mat-dialog-close]="pilot" cdkFocusInitial>Adicionar</button>
-    <button *ngIf="isEdit" matButton [mat-dialog-close]="pilot" cdkFocusInitial>Editar</button>
-
+    <button mat-button (click)="onNoClick()">Cancelar</button>
+    <button *ngIf="!isEdit" mat-button [mat-dialog-close]="pilot" cdkFocusInitial>Adicionar</button>
+    <button *ngIf="isEdit" mat-button [mat-dialog-close]="pilot" cdkFocusInitial>Editar</button>
 </mat-dialog-actions>

@@ -43,3 +43,7 @@ table {
 .delete-icon {
   color: #c62828; /* Material Red */
 }
+
+.add-button {
+  margin-bottom: 20px;
+}

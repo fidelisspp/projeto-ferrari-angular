@@ -42,13 +42,14 @@ export class CrudComponent {
               const index = this.dataSource.findIndex(p => p.id === result.id);
               if (index !== -1) {
                 this.dataSource[index] = data;
+                this.dataSource = [...this.dataSource];
                 this.table.renderRows();
               }
             });
         } else {
           this.pilotService.createPilot(result)
             .subscribe((data: Pilot) => {
-              this.dataSource.push(data);
+              this.dataSource = [...this.dataSource, data];
               this.table.renderRows();
             });
         }

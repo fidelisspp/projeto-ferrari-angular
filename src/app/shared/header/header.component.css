@@ -25,13 +25,8 @@
     cursor: pointer;
   }
 
-  .ferrari-logo {
-    height: 45px;
-    margin-right: 12px;
-  }
-
   .branding {
-    margin-left: 12px;
+    margin-left: 0;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
