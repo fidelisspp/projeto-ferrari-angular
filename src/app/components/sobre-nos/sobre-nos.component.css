@@ -1,0 +1,23 @@
+.sobre-container {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 20px 50px;
+}
+
+.sobre-container h1 {
+  font-size: 44px;
+  color: #8b0000;
+  text-align: center;
+  margin-bottom: 45px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.sobre-container p {
+  font-size: 20px;
+  line-height: 2;
+  margin-bottom: 28px;
+  text-align: justify;
+  color: #222;
+  font-weight: 400;
+}

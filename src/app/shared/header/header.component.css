@@ -1,51 +1,143 @@
+.main-header {
+  height: 120px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #000000,
+      #111111
+    );
+
+  border-bottom: 3px solid #c00000;
+
+  box-shadow:
+    0 5px 20px rgba(0,0,0,0.45);
+
+  padding: 0 40px;
+}
+
+.logo-container {
+  display: flex;
+
+  align-items: center;
+
+  gap: 24px;
+
+  cursor: pointer;
+}
+
+.logo-img {
+  width: 120px;
+  height: 120px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 0 14px rgba(255,0,0,0.35));
+
+  transition: 0.3s;
+}
+
+.logo-img:hover {
+  transform: scale(1.06);
+}
+
+.branding {
+  color: white;
+
+  font-size: 42px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
 .spacer {
   flex: 1 1 auto;
 }
 
-.main-header {
-  padding: 0 24px; 
+button {
+  color: white !important;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  margin-left: 14px;
+
   position: relative;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, .3);
-  z-index: 9;
-  
-  /* Cores da Ferrari */
-  background-color: #111111; 
-  color: #ffffff;
-  border-bottom: 4px solid #E60000; 
-  height: 70px;
-  
-  display: flex;
-  align-items: center;
+
+  transition: 0.3s;
+
+  background:
+    linear-gradient(
+      135deg,
+      #c00000,
+      #8b0000
+    );
+
+  border-radius: 10px;
+
+  padding: 10px 22px !important;
+
+  box-shadow:
+    0 6px 16px rgba(192,0,0,0.35);
 }
 
-  /* Alinhamento da Logo e do Texto */
-  .logo-container {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+button:hover {
+  color: #ffffff !important;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 22px rgba(192,0,0,0.5);
+}
+
+button::after {
+  content: '';
+
+  position: absolute;
+
+  left: 0;
+  bottom: 4px;
+
+  width: 0%;
+  height: 2px;
+
+  background: #ffffff;
+
+  transition: 0.3s;
+}
+
+button:hover::after {
+  width: 100%;
+}
+
+.active-link {
+  color: #ffffff !important;
+}
+
+@media (max-width: 768px) {
+
+  .main-header {
+    height: auto;
+    padding: 20px;
   }
 
   .branding {
-    margin-left: 0;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #ffffff;
+    font-size: 24px;
   }
 
-  /* Estilo dos botões dentro do header */
+  .logo-img {
+    width: 70px;
+    height: 70px;
+  }
+
   button {
-    color: #cccccc;
-    font-weight: 500;
-    margin-left: 8px;
-    transition: color 0.3s ease;
+    font-size: 14px;
+    margin-left: 5px;
+    padding: 8px 14px !important;
   }
-
-  button:hover {
-    color: #FFEB3B; 
-  }
-
-  .active-link {
-    color: #E60000;
-    font-weight: bold;
-  }
+}
